@@ -1,0 +1,18 @@
+{% extends 'boat/base.html' %}
+{% block content %}
+<div class="col-6">
+    <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Создание заявки</h4>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="boat_id" value="{{boat.pk}}">
+                {{form.as_p}}
+                <button type="submit" class="btn btn-success">Оставить заявку </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
