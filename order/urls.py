@@ -1,9 +1,9 @@
-from boat.apps import BoatConfig
 from django.urls import path
 
+from order.apps import OrderConfig
 from order.views import OrderCreateView
 
-app_name = BoatConfig.name
+app_name = OrderConfig.name
 
 
 urlpatterns = [

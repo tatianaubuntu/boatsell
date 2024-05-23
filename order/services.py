@@ -10,5 +10,5 @@ def send_order_email(order_item: Order):
         f'{order_item.name} ({order_item.email}) хочет купить вашу лодку {order_item.boat.name}. Вот сообщение:'
         f'{order_item.message}',
         settings.EMAIL_HOST_USER,
-        [order_item.boat.awner.email]
+        [order_item.boat.owner.email]
     )
